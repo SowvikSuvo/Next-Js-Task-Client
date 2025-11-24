@@ -24,7 +24,7 @@ export default function Home() {
                   Shop Now
                 </a>
                 <a
-                  href="#features"
+                  href="/about"
                   className="px-6 py-3 bg-pink-500 rounded-md hover:bg-pink-700"
                 >
                   Learn More

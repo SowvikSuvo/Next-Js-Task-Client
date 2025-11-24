@@ -134,14 +134,21 @@ export default function ProductsPage() {
             <label className="block mb-2 font-semibold text-gray-700">
               Category
             </label>
-            <FiTag className="absolute top-[48px] left-4  text-gray-400" />
-            <input
-              type="text"
+            <FiTag className="absolute top-[48px] left-4 text-gray-400" />
+            <select
               name="category"
-              placeholder="Category"
-              className="w-full border border-gray-300 rounded-lg px-10 py-3 focus:ring-2 focus:ring-amber-400 focus:outline-none transition focus:text-black text-gray-500"
+              className="w-full border border-gray-300 rounded-lg px-10 py-3 focus:ring-2 focus:ring-amber-400 focus:outline-none transition text-gray-700"
               required
-            />
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Select Category
+              </option>
+              <option value="Electronics">Electronics</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Sports">Sports</option>
+            </select>
           </div>
 
           {/* Stock */}
