@@ -6,7 +6,10 @@ const Footer = () => {
       <footer className="bg-gray-900 py-10 text-white">
         <div className="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-bold text-lg mb-3">MyShop</h3>
+            {/* Logo */}
+            <h2 className="text-2xl font-bold text-amber-600  md:text-3xl lg:text-4xl">
+              Gadget<span className="text-pink-600">Hub</span>
+            </h2>
             <p className="text-gray-300">
               Your trusted place for high-quality products.
             </p>
@@ -66,7 +69,7 @@ const Footer = () => {
         </div>
 
         <p className="text-center text-gray-400 mt-8">
-          © 2025 MyShop — All Rights Reserved
+          © 2025 GadgetHub — All Rights Reserved
         </p>
       </footer>
     </div>

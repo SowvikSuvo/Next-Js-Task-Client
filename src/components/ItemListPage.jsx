@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FiInfo } from "react-icons/fi";
 
 export default function ItemListPage({ products }) {
@@ -23,22 +24,33 @@ export default function ItemListPage({ products }) {
               />
 
               {/* Card Content */}
-              <div className="p-4 flex flex-col gap-2">
+              <div className="p-4 space-y-2 flex flex-col gap-2">
                 <h2 className="text-xl font-bold text-amber-600">
                   {item.title}
                 </h2>
                 <p className="text-gray-600 text-sm line-clamp-2">
                   {item.shortDescription}
                 </p>
-                <span className="text-lg font-semibold text-gray-800">
-                  ${item.price}
-                </span>
+                <div className="flex justify-between items-center ">
+                  <span className="text-lg font-semibold text-gray-800">
+                    ${item.price}
+                  </span>
+                  <span className="text-sm font-semibold text-gray-800">
+                    <span className="font-medium text-sm text-red-500">
+                      In Stock:
+                    </span>{" "}
+                    {item.stock}
+                  </span>
+                </div>
 
                 {/* Details Button */}
-                <button className="mt-2 flex items-center justify-center gap-2 bg-amber-600 text-white py-2 rounded-xl hover:bg-amber-700 font-medium transition">
+                <Link
+                  href={`/products/productsDetails/${item._id}`}
+                  className=" mt-2 flex items-center justify-center gap-2 bg-amber-600 text-white py-2 rounded-xl hover:bg-amber-700 font-medium transition"
+                >
                   <FiInfo />
                   Details
-                </button>
+                </Link>
               </div>
             </div>
           ))}

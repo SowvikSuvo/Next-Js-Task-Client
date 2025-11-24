@@ -37,13 +37,13 @@ export default function AllProducts() {
       </p>
 
       {/* Search & Filter */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8 ">
         <div className="relative w-full md:w-1/3">
           <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
           <input
             type="text"
             placeholder="Search products..."
-            className="w-full border border-gray-300 rounded-lg px-10 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400 text-black transition"
+            className="w-full border border-gray-300 rounded-lg px-10 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400 text-black transition bg-white"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -52,13 +52,17 @@ export default function AllProducts() {
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="w-full md:w-1/4 border border-gray-300 bg-amber-500 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+          className="w-full md:w-1/4 border border-gray-300 bg-amber-500 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400 transition "
         >
-          <option value="">All Categories</option>
+          <option className="rounded" value="">
+            All Categories
+          </option>
           <option value="Electronics">Electronics</option>
           <option value="Furniture">Furniture</option>
           <option value="Accessories">Accessories</option>
-          <option value="Sports">Sports</option>
+          <option className="rounded" value="Sports">
+            Sports
+          </option>
         </select>
       </div>
 
