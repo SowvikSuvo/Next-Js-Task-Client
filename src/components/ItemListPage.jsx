@@ -61,6 +61,7 @@ export default function ItemListPage({ products }) {
         </div>
       ) : (
         // No products found message
+
         <div className="text-center py-20">
           <p className="text-2xl text-gray-500 font-semibold">
             No products found

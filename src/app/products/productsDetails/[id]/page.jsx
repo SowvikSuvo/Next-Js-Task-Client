@@ -24,7 +24,7 @@ export default function ProductDetailsPage() {
     if (!id) return;
 
     axios
-      .get(`http://localhost:5000/products/${id}`)
+      .get(`https://next-js-task-server.vercel.app/products/${id}`)
       .then((res) => {
         setProduct(res.data);
         setLoading(false);

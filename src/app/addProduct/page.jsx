@@ -38,7 +38,7 @@ export default function ProductPage() {
     data.email = user.email;
 
     axios
-      .post("http://localhost:5000/products", data)
+      .post("https://next-js-task-server.vercel.app/products", data)
       .then(() => {
         Swal.fire({
           title: "Success!",

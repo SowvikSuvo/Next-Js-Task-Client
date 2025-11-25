@@ -8,15 +8,18 @@ export default function AllProducts() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
+  // const [loading, setLoading] = useState(true);
 
   // Fetch products from backend
   useEffect(() => {
-    fetch("http://localhost:5000/allProducts")
+    fetch("https://next-js-task-server.vercel.app/allProducts")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   // Filter products based on search & category
@@ -25,6 +28,13 @@ export default function AllProducts() {
       p.title?.toLowerCase().includes(search.toLowerCase()) &&
       (category === "" || p.category === category)
   );
+  // if (!loading) {
+  //   return (
+  //     <div className="flex justify-center items-center">
+  //       <span className="loading loading-infinity loading-lg text-warning"></span>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="max-w-6xl mx-auto p-4 sm:p-6 md:p-8">

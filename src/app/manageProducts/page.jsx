@@ -12,7 +12,9 @@ export default function ManageProducts() {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:5000/myProducts?email=${user.email}`)
+      fetch(
+        `https://next-js-task-server.vercel.app/myProducts?email=${user.email}`
+      )
         .then((res) => res.json())
         .then((data) => setProducts(data))
         .catch((err) => console.log(err));
@@ -31,7 +33,7 @@ export default function ManageProducts() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/myProducts/${id}`)
+          .delete(`https://next-js-task-server.vercel.app/myProducts/${id}`)
           .then(() => {
             Swal.fire("Deleted!", "Your product has been deleted.", "success");
             setProducts(products.filter((p) => p._id !== id));
