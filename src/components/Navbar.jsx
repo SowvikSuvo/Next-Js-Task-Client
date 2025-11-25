@@ -165,7 +165,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Toggle */}
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex items-center text-black">
           <button
             className="px-3 py-2 border rounded"
             onClick={() => setMenuOpen(!menuOpen)}

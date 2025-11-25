@@ -210,8 +210,8 @@ export default function Home() {
       </div>
 
       {/* ================== FEATURES SECTION ================== */}
-      <section className="py-20">
-        <h2 className="text-4xl font-bold text-center mb-14 text-blue-400">
+      <section className="mt-5 md:mt-2 ">
+        <h2 className="text-4xl font-bold text-center mb-10 text-blue-400">
           Why Choose Us?
         </h2>
 
