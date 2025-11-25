@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useContext, useRef, useEffect } from "react";
 import { AuthContext } from "@/components/AuthContext";
+import { CgHeadset } from "react-icons/cg";
 import Swal from "sweetalert2";
 import { FaPlus, FaTasks, FaSignOutAlt } from "react-icons/fa";
 
@@ -58,8 +59,9 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <h2 className="text-2xl font-bold text-amber-600  md:text-3xl lg:text-4xl">
-          Gadget<span className="text-pink-600">Hub</span>
+        <h2 className="text-2xl font-bold flex   gap-1 text-pink-600  md:text-3xl lg:text-4xl">
+          <CgHeadset color="teal" size={35} /> Gadget
+          <span className="text-blue-600">Hub</span>
         </h2>
 
         {/* Desktop Links */}

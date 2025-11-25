@@ -1,4 +1,5 @@
 import React from "react";
+import { CgHeadset } from "react-icons/cg";
 
 const Footer = () => {
   return (
@@ -7,8 +8,9 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div>
             {/* Logo */}
-            <h2 className="text-2xl font-bold text-amber-600  md:text-3xl lg:text-4xl">
-              Gadget<span className="text-pink-600">Hub</span>
+            <h2 className="text-2xl font-bold flex   gap-1 text-pink-600  md:text-3xl lg:text-4xl">
+              <CgHeadset color="teal" size={35} /> Gadget
+              <span className="text-blue-600">Hub</span>
             </h2>
             <p className="text-gray-300">
               Your trusted place for high-quality products.
