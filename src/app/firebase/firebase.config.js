@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBdhpXjc2I2uYY6dRSywoPkbezZs-qO8sI",
-  authDomain: "gadgethub-apps.firebaseapp.com",
-  projectId: "gadgethub-apps",
-  storageBucket: "gadgethub-apps.firebasestorage.app",
-  messagingSenderId: "38559482288",
-  appId: "1:38559482288:web:186bfa64e859d6f3be5675",
+  apiKey: process.env.NEXT_PUBLIC_apiKey,
+  authDomain: process.env.NEXT_PUBLIC_authDomain,
+  projectId: process.env.NEXT_PUBLIC_projectId,
+  storageBucket: process.env.NEXT_PUBLIC_storageBucket,
+  messagingSenderId: process.env.NEXT_PUBLIC_messagingSenderId,
+  appId: process.env.NEXT_PUBLIC_appId,
 };
 
 // Initialize Firebase
