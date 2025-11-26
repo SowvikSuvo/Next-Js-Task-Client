@@ -39,11 +39,19 @@ export default function AuthProvider({ children }) {
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      setLoading(false);
-      console.log(currentUser);
-    });
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (currentUser) => {
+        setUser(currentUser);
+        setLoading(false);
+        console.log(currentUser);
+      },
+      (error) => {
+        console.error("Firebase auth error:", error);
+        setLoading(false); // prevent infinite loading
+      }
+    );
+
     return () => unsubscribe();
   }, []);
 

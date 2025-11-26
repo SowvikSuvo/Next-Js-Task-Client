@@ -6,17 +6,16 @@ import { FiInfo } from "react-icons/fi";
 import { AuthContext } from "./AuthContext";
 
 export default function ItemListPage({ products }) {
-  const { loading } = useContext(AuthContext);
   // Ensure products is always an array
   const productsArray = Array.isArray(products) ? products : [];
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
-        <span className="loading loading-infinity loading-lg text-warning"></span>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="flex justify-center items-center min-h-screen">
+  //       <span className="loading loading-infinity loading-lg text-warning"></span>
+  //     </div>
+  //   );
+  // }
   return (
     <div className="min-h-screen">
       {productsArray.length > 0 ? (
