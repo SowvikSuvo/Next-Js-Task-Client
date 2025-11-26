@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-50 text-gray-800">
+    <div className="w-full min-h-screen bg-gray-50 text-gray-800 mt-18">
       {/* Hero Section */}
       <section className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20 px-5 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">About GadgetHub</h1>

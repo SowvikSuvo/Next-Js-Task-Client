@@ -36,7 +36,7 @@ const images = [
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white min-h-screen max-w-7xl mx-auto">
+    <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white min-h-screen max-w-7xl mx-auto mt-20">
       {/* ================== HERO SECTION ================== */}
       <section className="relative overflow-hidden pt-24 pb-20">
         {/* Floating Gadgets */}

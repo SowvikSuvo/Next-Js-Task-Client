@@ -1,5 +1,11 @@
 import React from "react";
 import { CgHeadset } from "react-icons/cg";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -64,9 +70,37 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-bold mb-3">Follow Us</h4>
-            <p className="text-gray-300">Social icons here</p>
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-white">Follow Us</h3>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.facebook.com/sowvik.karmokersuvo/"
+                target="_blank"
+                className="p-3 bg-purple-600 rounded-full text-white hover:bg-purple-500 transition"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                className="p-3 bg-teal-600 rounded-full text-white hover:bg-teal-500 transition"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="#"
+                className="p-3 bg-pink-500 rounded-full text-white hover:bg-pink-400 transition"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sowvik-suvo/"
+                target="_blank"
+                className="p-3 bg-indigo-600 rounded-full text-white hover:bg-indigo-500 transition"
+              >
+                <FaLinkedinIn />
+              </a>
+            </div>
           </div>
         </div>
 

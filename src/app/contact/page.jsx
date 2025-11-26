@@ -1,6 +1,6 @@
 export default function ContactPage() {
   return (
-    <main className="w-full min-h-screen bg-gray-50 text-gray-800">
+    <main className="w-full min-h-screen bg-gray-50 text-gray-800 mt-18">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-20 px-5 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">

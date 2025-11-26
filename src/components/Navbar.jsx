@@ -56,7 +56,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <h2 className="text-2xl font-bold flex   gap-1 text-pink-600  md:text-3xl lg:text-4xl">

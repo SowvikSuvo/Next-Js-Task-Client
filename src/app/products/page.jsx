@@ -1,14 +1,16 @@
 "use client";
 
+import { AuthContext } from "@/components/AuthContext";
 import ItemListPage from "@/components/ItemListPage";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
 export default function AllProducts() {
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
-  // const [loading, setLoading] = useState(true);
+  // const { loading } = useContext(AuthContext);
+  const [loading, setLoading] = useState(true);
 
   // Fetch products from backend
   useEffect(() => {
@@ -16,9 +18,11 @@ export default function AllProducts() {
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
+        setLoading(true);
       });
   }, []);
 
@@ -28,18 +32,18 @@ export default function AllProducts() {
       p.title?.toLowerCase().includes(search.toLowerCase()) &&
       (category === "" || p.category === category)
   );
-  // if (!loading) {
-  //   return (
-  //     <div className="flex justify-center items-center">
-  //       <span className="loading loading-infinity loading-lg text-warning"></span>
-  //     </div>
-  //   );
-  // }
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <span className="loading loading-infinity loading-lg text-warning"></span>
+      </div>
+    );
+  }
 
   return (
-    <div className="max-w-6xl mx-auto p-4 sm:p-6 md:p-8">
+    <div className="max-w-6xl mx-auto p-4 sm:p-6 md:p-8 mt-25">
       {/* Page Title */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-600 text-center mb-3">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-600 text-center mb-3 ">
         All Products
       </h2>
       <p className="text-pink-600 text-center mb-5 md:text-lg">
@@ -47,9 +51,9 @@ export default function AllProducts() {
       </p>
 
       {/* Search & Filter */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8 ">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12 ">
         <div className="relative w-full md:w-1/3">
-          <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+          <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 " />
           <input
             type="text"
             placeholder="Search products..."

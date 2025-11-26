@@ -62,7 +62,7 @@ export default function ProductPage() {
 
   return (
     <PrivateRoute>
-      <div className="min-h-screen bg-gradient-to-r from-amber-100 via-amber-50 to-white flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-r from-amber-100 via-amber-50 to-white flex items-center justify-center p-4 mt-18">
         <div className="w-full max-w-4xl bg-white shadow-2xl rounded-2xl p-8 md:p-12 border border-amber-200">
           <h1 className="text-4xl md:text-5xl font-extrabold text-amber-600 text-center mb-8">
             Add New Product

@@ -10,14 +10,22 @@ export default function ManageProducts() {
   const { user } = useContext(AuthContext);
   const [products, setProducts] = useState([]);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     if (user?.email) {
       fetch(
         `https://next-js-task-server.vercel.app/myProducts?email=${user.email}`
       )
         .then((res) => res.json())
-        .then((data) => setProducts(data))
-        .catch((err) => console.log(err));
+        .then((data) => {
+          setProducts(data);
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          setLoading(true);
+        });
     }
   }, [user]);
 
@@ -45,9 +53,17 @@ export default function ManageProducts() {
     });
   };
 
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <span className="loading loading-infinity loading-lg text-warning"></span>
+      </div>
+    );
+  }
+
   return (
     <PrivateRoute>
-      <div className="p-6 max-w-7xl mx-auto">
+      <div className="p-6 max-w-7xl mx-auto mt-20">
         <h2 className="text-3xl font-extrabold text-amber-400 mb-8 text-center">
           Manage Products
         </h2>

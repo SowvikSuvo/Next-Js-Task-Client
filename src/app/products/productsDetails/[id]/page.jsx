@@ -37,8 +37,8 @@ export default function ProductDetailsPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-gray-400 text-xl">Loading...</p>
+      <div className="flex justify-center items-center min-h-screen">
+        <span className="loading loading-infinity loading-lg text-warning"></span>
       </div>
     );
   }
@@ -52,7 +52,7 @@ export default function ProductDetailsPage() {
   }
 
   return (
-    <div className="min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100 rounded-2xl ">
+    <div className="min-h-screen max-w-7xl mx-auto bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-100 rounded-2xl mt-18">
       {/* Banner */}
       {/* Banner with Image Zoom + Overlay */}
       <div className="relative w-full h-80 md:h-[500px] overflow-hidden group">
