@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Task – (GadgetHub) Gadget Management Application
 
-## Getting Started
+## Project Description
 
-First, run the development server:
+This is **Gadget Management Web Application(GadgetHub)** built with **Next.js (App Router)** for the frontend and **Express.js**, **MongoDB** for the backend. The app features **public and protected pages** with authentication handled via **Firebase Authentication** (Google and login/register).
+
+The application includes a landing page with a polished UI, responsive design, and multiple sections, along with item listing, item details, and product management functionalities.
+
+Key Features:
+
+- Landing page with hero section, features, items, testimonials, and footer.
+- Login/Register with social login (Google) and credentials form.(Firebase Authentication)
+- Item List and Item Details pages.
+- Protected pages: Add Product & Manage Products.
+- Responsive, modern UI with interactive cards, clean layout, and hover effects.
+
+---
+
+## Technologies Used
+
+**Frontend:**
+
+- Next.js (App Router)
+- React & React DOM
+- Tailwind CSS + DaisyUI
+- Framer Motion
+- Swiper
+- React Icons
+- React Fast Marquee
+- SweetAlert2 for notifications
+
+**Backend:**
+
+- Express.js
+- MongoDB
+- CORS
+- dotenv
+
+**Authentication:**
+
+- Firebase Authentication (Google and login/register)
+
+---
+
+## Setup & Installation
+
+### 1. Clone the repository client
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/SowvikSuvo/Next-Js-Task-Client.git
+cd next-js-task-client
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Clone the repository server
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+git clone https://github.com/SowvikSuvo/Next-Js-Task-Server.git
+cd next-js-task-server
+```
