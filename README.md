@@ -49,6 +49,8 @@ Key Features:
 ```bash
 git clone https://github.com/SowvikSuvo/Next-Js-Task-Client.git
 cd next-js-task-client
+npm i
+npm run dev
 ```
 
 ### 2. Clone the repository server
@@ -56,4 +58,6 @@ cd next-js-task-client
 ```bash
 git clone https://github.com/SowvikSuvo/Next-Js-Task-Server.git
 cd next-js-task-server
+npm i
+npm run dev
 ```
