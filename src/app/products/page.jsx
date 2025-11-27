@@ -14,6 +14,7 @@ export default function AllProducts() {
 
   // Fetch products from backend
   useEffect(() => {
+    setLoading(true);
     fetch("https://next-js-task-server.vercel.app/allProducts")
       .then((res) => res.json())
       .then((data) => {
@@ -22,7 +23,7 @@ export default function AllProducts() {
       })
       .catch((err) => {
         console.log(err);
-        setLoading(true);
+        setLoading(false);
       });
   }, []);
 
@@ -35,7 +36,7 @@ export default function AllProducts() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <span className="loading loading-infinity loading-lg text-warning"></span>
+        <span className="loading loading-spinner text-warning"></span>
       </div>
     );
   }

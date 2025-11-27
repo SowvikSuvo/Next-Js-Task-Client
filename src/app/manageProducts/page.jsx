@@ -14,18 +14,24 @@ export default function ManageProducts() {
 
   useEffect(() => {
     if (user?.email) {
+      setLoading(true);
       fetch(
         `https://next-js-task-server.vercel.app/myProducts?email=${user.email}`
       )
         .then((res) => res.json())
         .then((data) => {
-          setProducts(data);
+          // Prevent map crash
+          setProducts(Array.isArray(data) ? data : []);
           setLoading(false);
         })
         .catch((err) => {
           console.log(err);
-          setLoading(true);
+          setProducts([]); // fail-safe
+          setLoading(false);
         });
+    } else {
+      setProducts([]); // when not logged in
+      setLoading(false);
     }
   }, [user]);
 
@@ -56,7 +62,7 @@ export default function ManageProducts() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <span className="loading loading-infinity loading-lg text-warning"></span>
+        <span className="loading loading-spinner text-warning"></span>
       </div>
     );
   }

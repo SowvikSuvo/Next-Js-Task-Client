@@ -1,12 +1,9 @@
-"use client";
 import React from "react";
 
-const loading = () => {
+export default function loading() {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <span className="loading loading-spinner text-warning"></span>
+    <div className="min-h-screen flex justify-center items-center">
+      <span className="loading loading-ring loading-lg"></span>
     </div>
   );
-};
-
-export default loading;
+}

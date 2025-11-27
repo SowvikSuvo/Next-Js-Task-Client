@@ -38,7 +38,7 @@ export default function ProductDetailsPage() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <span className="loading loading-infinity loading-lg text-warning"></span>
+        <span className="loading loading-spinner text-warning"></span>
       </div>
     );
   }
